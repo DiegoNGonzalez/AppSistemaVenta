@@ -6,7 +6,7 @@ import {environment} from 'src/environments/environment';
 import { ResponseApi } from '../Interfaces/response-api';
 import { Usuario } from '../Interfaces/usuario';
 import { Login } from '../Interfaces/login';
-import { ObserversModule } from '@angular/cdk/observers';
+
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +35,5 @@ export class UsuarioService {
   eliminar(id:number):Observable<ResponseApi>{
     return this.http.delete<ResponseApi>(`${this.urlApi}Eliminar/${id}`);
   }
-  
+
 }
