@@ -1,6 +1,6 @@
 export interface Producto {
     idProducto:number,
-    nombre:string,
+    nombreProducto:string,
     idCategoria:number,
     descripcionCategoria:string,
     stock:number,
