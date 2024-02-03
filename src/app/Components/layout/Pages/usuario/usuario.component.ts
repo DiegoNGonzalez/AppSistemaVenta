@@ -3,6 +3,7 @@ import { Component, OnInit,AfterViewInit,ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
+
 import { ModalUsuarioComponent } from '../../Modales/modal-usuario/modal-usuario.component';
 import { Usuario } from 'src/app/Interfaces/usuario';
 import { UsuarioService } from 'src/app/Services/usuario.service';
