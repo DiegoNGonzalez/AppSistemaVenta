@@ -1,0 +1,23 @@
+.camposFormulario{
+    display: flex;
+    align-items: flex-start;
+}
+
+.btnBuscar{
+    width: 150px;
+    margin-top: 15px;
+}
+
+mat-form-field{
+    margin-right: 10px;
+}
+
+.inputFilter{
+    width: 100%;
+    font-size: 14px;
+}
+
+table{
+    width: 100%;
+    
+}
