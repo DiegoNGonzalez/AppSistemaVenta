@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Sesion } from '../Interfaces/sesion';
+import { AuthService } from '../Services/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilidadService {
 
-  constructor(private _snackBar:MatSnackBar) { }
+  constructor(private _snackBar:MatSnackBar,  private _authService:AuthService) { }
 
   mostrarAlerta(mensaje:string, tipo:string)
   {
@@ -22,6 +23,7 @@ export class UtilidadService {
   guardarSesionUsuario(usuarioSesion:Sesion)
   {
     localStorage.setItem('usuario',JSON.stringify(usuarioSesion));
+    this._authService.login();
   }
 
   obtenerSesionUsuario()
@@ -34,5 +36,6 @@ export class UtilidadService {
 
   eliminarSesionUsuario(){
     localStorage.removeItem('usuario');
+    this._authService.logout();
   }
 }
