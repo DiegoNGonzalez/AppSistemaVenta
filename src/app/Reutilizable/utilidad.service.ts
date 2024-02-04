@@ -28,6 +28,7 @@ export class UtilidadService {
   {
     const dataCadena= localStorage.getItem('usuario');
     const usuario= JSON.parse(dataCadena!);
+    
     return usuario;
   }
 
