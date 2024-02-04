@@ -34,7 +34,7 @@ export class ModalProductoComponent implements OnInit {
 
   ) {
     this.formProducto=this.fb.group({
-      nombre:['',Validators.required],
+      nombreProducto:['',Validators.required],
       idCategoria:['',Validators.required],
       stock:['',Validators.required],
       precio:['',Validators.required],
@@ -71,7 +71,7 @@ export class ModalProductoComponent implements OnInit {
 
     const _producto: Producto ={
       idProducto:this.datosProducto==null?0:this.datosProducto.idProducto,
-      nombreProducto:this.formProducto.value.nombre,
+      nombreProducto:this.formProducto.value.nombreProducto,
       idCategoria:this.formProducto.value.idCategoria,
       descripcionCategoria:"",
       precio:this.formProducto.value.precio,
